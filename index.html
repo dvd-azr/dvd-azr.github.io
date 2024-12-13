@@ -4,9 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David</title>
     <link rel="stylesheet" href="./assets/css/splash.css">
+    <link rel="icon" type="image/png" href="/assets/img/logo/dvd-logo.png" />
+    
+    <title>David</title>
+    <!-- Meta Tag -->
+    <meta
+      name="description"
+      content="David Azhari | github"
+    />
 
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="David Azhari | github.io"
+    />
+    <meta
+      property="og:description"
+      content="David Azhari | Splash Screen"
+    />
+    <meta
+      property="og:site_name"
+      content="https://dvd-azr.github.io/"
+    />
+    <meta
+      property="og:image"
+      content="/assets/img/logo/dvd-logo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
 </head>
 
 <body>
@@ -23,6 +49,16 @@
         </div>
     </div>
     <!-- end Splash Screen -->
+
+    <script>
+        const site_name = document.querySelector('meta[property="og:site_name"]');
+        const og_image = document.querySelector('meta[property="og:image"]');
+        site_name.setAttribute("content", window.location.origin);
+        og_image.setAttribute(
+          "content",
+          window.location.origin + og_image.getAttribute("content")
+        );
+      </script>
 </body>
 
 </html>
