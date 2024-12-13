@@ -7,31 +7,43 @@
     <link rel="stylesheet" href="./assets/css/splash.css">
     <link rel="icon" type="image/png" href="/assets/img/logo/dvd-logo.png" />
     
-    <title>David</title>
+    <title>David Azhari</title>
     <!-- Meta Tag -->
     <meta
       name="description"
-      content="David Azhari | github"
+      content="David Azhari Github Page"
     />
 
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="David Azhari | dvd-azr.github.io"
+      content="David Azhari"
     />
     <meta
       property="og:description"
       content="Github page of David Azhari"
     />
-    <meta
-      property="og:site_name"
-      content="https://dvd-azr.github.io/"
-    />
+
+    <script>
+        const origin = window.location.origin;
+        if (origin === "https://dvd-azr.github.io") {
+            document.write(`
+            <meta property="og:site_name"content="https://dvd-azr.github.io/" />
+            <meta property="og:image" content="https://dvd-azr.github.io/assets/img/logo/dvd-logo.png" />
+            `);
+        } else{
+            document.write(`
+            <meta property="og:site_name"content="https://dreamdesign.asia/" />
+            <meta property="og:image" content="https://dreamdesign.asia/assets/img/logo/dvd-logo.png" />
+            `);
+        }
+    </script>
+    <!-- <meta property="og:site_name"content="https://dvd-azr.github.io/" />
     <meta
       property="og:image"
       content="https://dvd-azr.github.io/assets/img/logo/dvd-logo.png"
-    />
+    /> -->
     <meta property="og:image:type" content="image/png" />
 </head>
 
@@ -49,16 +61,6 @@
         </div>
     </div>
     <!-- end Splash Screen -->
-
-    <script>
-        const site_name = document.querySelector('meta[property="og:site_name"]');
-        const og_image = document.querySelector('meta[property="og:image"]');
-        site_name.setAttribute("content", window.location.origin);
-        og_image.setAttribute(
-          "content",
-          window.location.origin + og_image.getAttribute("content")
-        );
-      </script>
 </body>
 
 </html>
